@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Casa Rosa - Casa de Santo</title>
     <style>
-        /* Variáveis de cores */
         :root {
             --vermelho-escuro: #8B0000;
             --vermelho-medio: #A52A2A;
@@ -17,7 +16,6 @@
             --preto: #333333;
         }
 
-        /* Reset e estilos gerais */
         * {
             margin: 0;
             padding: 0;
@@ -38,37 +36,13 @@
             padding: 0 15px;
         }
 
-        /* Cabeçalho */
         header {
             background: linear-gradient(to right, var(--marrom-escuro), var(--vermelho-escuro));
             color: var(--branco);
             padding: 20px 0;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
             position: sticky;
             top: 0;
             z-index: 1000;
-        }
-
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-
-        .logo h1 {
-            font-size: 1.8rem;
-            margin-left: 10px;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-        }
-
-        .logo-icon {
-            font-size: 2rem;
-            color: var(--dourado);
         }
 
         nav ul {
@@ -83,541 +57,155 @@
         nav ul li a {
             color: var(--branco);
             text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-            padding: 5px 10px;
-            border-radius: 4px;
         }
 
-        nav ul li a:hover {
-            color: var(--dourado);
-            background-color: rgba(255, 255, 255, 0.1);
-        }
-
-        /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(93, 64, 55, 0.7), rgba(139, 0, 0, 0.7)), url('oxossi.png') no-repeat center center/cover;
+            background: linear-gradient(rgba(93,64,55,0.7), rgba(139,0,0,0.7)), url('oxossi.png') no-repeat center/cover;
             height: 80vh;
             display: flex;
             align-items: center;
             text-align: center;
             color: var(--branco);
-            padding: 0 20px;
         }
 
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .hero h2 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: var(--dourado);
-            color: var(--preto);
-            padding: 12px 30px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: all 0.5s;
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn:hover {
-            background-color: var(--branco);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Seções */
         section {
             padding: 80px 0;
         }
 
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-            color: var(--vermelho-escuro);
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 3px;
-            background-color: var(--dourado);
-            margin: 15px auto;
-        }
-
-        /* Sobre */
         .about {
-            background-color: var(--branco);
+            background: var(--branco);
         }
-/* Vídeos adicionados */
+
+        /* Vídeos adicionados */
         .videos-container {
-            max-width: 9px;
-            margin: 4px auto 0 auto;
+            max-width: 900px;
+            margin: 40px auto 0 auto;
             display: flex;
             flex-direction: column;
             gap: 25px;
         }
 
-
         .videos-container iframe {
             width: 100%;
-            height: 250px;
-            border-radius: 4px;
+            height: 300px;
+            border-radius: 14px;
             border: none;
         }
-        .about-content {
-            display: flex;
-            align-items: center;
-            gap: 40px;
-        }
 
-        .about-text {
-            flex: 1;
-        }
-
-        .about-image {
-            flex: 1;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .about-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        /* Serviços */
-        .services {
-            background-color: var(--marrom-claro);
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .service-card {
-            background-color: var(--branco);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .service-icon {
-            background-color: var(--vermelho-medio);
-            color: var(--branco);
-            font-size: 2.5rem;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .service-content {
-            padding: 20px;
-        }
-
-        .service-content h3 {
-            color: var(--vermelho-escuro);
-            margin-bottom: 15px;
-        }
-
-        /* Contato */
-        .contact {
-            background-color: var(--branco);
-        }
-
-        .contact-container {
-            display: flex;
-            gap: 40px;
-        }
-
-        .contact-info, .contact-form {
-            flex: 1;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 20px;
-        }
-
-        .contact-icon {
-            background-color: var(--vermelho-medio);
-            color: var(--branco);
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 15px;
-            flex-shrink: 0;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            color: var(--marrom-escuro);
-            font-weight: 500;
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid var(--marrom-claro);
-            border-radius: 5px;
-            font-size: 1rem;
-            transition: border-color 0.3s;
-        }
-
-        .form-control:focus {
-            border-color: var(--vermelho-medio);
-            outline: none;
-        }
-
-        textarea.form-control {
-            min-height: 150px;
-            resize: vertical;
-        }
-
-        /* Rodapé */
         footer {
             background-image: url('danadana.png');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            padding: 50px 20px; /* garante espaço interno */
-            color: white; /* deixa o texto visível */
+            padding: 50px 20px;
+            color: white;
         }
-
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 30px;
-        }
-
-        .footer-column {
-            flex: 1;
-            padding: 0 15px;
-        }
-
-        .footer-column h3 {
-            color: var(--dourado);
-            margin-bottom: 20px;
-            font-size: 1.2rem;
-        }
-
-        .footer-column ul {
-            list-style: none;
-        }
-
-        .footer-column ul li {
-            margin-bottom: 10px;
-        }
-
-        .footer-column ul li a {
-            color: var(--branco);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer-column ul li a:hover {
-            color: var(--dourado);
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 15px;
-        }
-
-        .social-icon {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            color: var(--branco);
-            text-decoration: none;
-            transition: all 0.3s;
-        }
-
-        .social-icon:hover {
-            background-color: var(--dourado);
-            color: var(--preto);
-            transform: translateY(-3px);
-        }
-
-        .copyright {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: 0.9rem;
-            color: var(--marrom-claro);
-        }
-
-        /* Responsividade */
-        @media (max-width: 768px) {
-            .header-container {
-                flex-direction: column;
-            }
-
-            nav ul {
-                margin-top: 15px;
-            }
-
-            .about-content, .contact-container {
-                flex-direction: column;
-            }
-
-            .hero h2 {
-                font-size: 2.2rem;
-            }
-
-            .footer-content {
-                flex-direction: column;
-            }
-
-            .footer-column {
-                margin-bottom: 30px;
-            }
-
-
-        }
-    </style>
+    
+/* Estilo do carrossel de vídeos */
+.video-carousel {
+    position: relative;
+    max-width: 900px;
+    margin: 40px auto;
+    overflow: hidden;
+}
+.carousel-track {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+}
+.carousel-track iframe {
+    min-width: 100%;
+    height: 320px;
+    border-radius: 14px;
+    border: none;
+}
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 22px;
+    border-radius: 50%;
+}
+.prev { left: 10px; }
+.next { right: 10px; }
+</style>
 </head>
 <body>
-    <!-- Cabeçalho -->
-    <header>
-        <div class="container header-container">
-            <div class="logo">
-                <span class="logo-icon">✿</span>
-                <h1>Casa Rosa</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#home">Início</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<header>
+    <div class="container header-container">
+        <div class="logo"><h1>Casa Rosa</h1></div>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container hero-content">
-            <h2>Casa Rosa - Casa de Santo</h2>
-            <p>Um espaço sagrado dedicado à espiritualidade, tradição e acolhimento. Conecte-se com as energias superiores e encontre paz interior.</p>
-            <a href="#contato" class="btn">Agende uma Consulta</a>
+<section class="hero" id="home">
+    <div class="container hero-content">
+        <h2>Casa Rosa - Casa de Santo</h2>
+        <p>Um espaço sagrado dedicado à espiritualidade, tradição e acolhimento.</p>
+    </div>
+</section>
+
+<section class="about" id="sobre">
+    <div class="container">
+        <h2 class="section-title">Sobre a Casa Rosa</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>A Casa Rosa é uma casa de santo com mais de 30 anos de tradição...</p>
+            </div>
+            <div class="about-image">
+                <img src="casarosafrente.PNG" />
+            </div>
         </div>
+
         <!-- VÍDEOS ADICIONADOS -->
-        
-    </section>
+        <div class="video-carousel">
+    <button class="carousel-btn prev">&#10094;</button>
+    <div class="carousel-track">
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" allowfullscreen></iframe>
+    </div>
+    <button class="carousel-btn next">&#10095;</button>
+</div>
+    </div>
+</section>
 
-    <!-- Sobre -->
-    <section class="about" id="sobre">
-        <div class="container">
-            <h2 class="section-title">Sobre a Casa Rosa</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>A Casa Rosa é uma casa de santo com mais de 30 anos de tradição, fundada pela Mãe de Santo Rosa Maria. Nossa missão é proporcionar um ambiente sagrado onde as pessoas possam se conectar com as energias superiores e encontrar orientação espiritual.</p>
-                    <p>Nossa casa segue os preceitos das tradições afro-brasileiras, respeitando os orixás e entidades que nos guiam. Oferecemos diversos serviços espirituais, incluindo consultas, passes, ebós e trabalhos de cura.</p>
-                    <p>Acreditamos que cada pessoa tem um caminho espiritual único e estamos aqui para ajudar a desvendá-lo, sempre com respeito, ética e amor.</p>
-                </div>
-                <div class="about-image">
-                    <img src="casarosafrente.PNG" alt="Altar da Casa Rosa">
+<footer>
+    <div class="container">
+        <p>Casa Rosa © 2023</p>
+    </div>
+</footer>
+<script>
+const track = document.querySelector('.carousel-track');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+let index = 0;
+const total = track.children.length;
 
-                </div>    
-            </div>
-            <div>
-                <div class="videos-container">
-                        <iframe src="Rosa ase_casarosa.mp4" allowfullscreen></iframe>
-                        <iframe src="Comunidadease_casarosa.mp4" allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-    </section>
+function updateCarousel() {
+    track.style.transform = `translateX(-${index * 100}%)`;
+}
 
-    <!-- Serviços -->
-    <section class="services" id="servicos">
-        <div class="container">
-            <h2 class="section-title">Nossos Serviços</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">🕯️</div>
-                    <div class="service-content">
-                        <h3>Consultas Espirituais</h3>
-                        <p>Orientação espiritual personalizada através do jogo de búzios, tarot e outras ferramentas divinatórias para esclarecer dúvidas e caminhos.</p>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🌿</div>
-                    <div class="service-content">
-                        <h3>Passes e Limpezas</h3>
-                        <p>Limpeza energética e passes espirituais para remover energias negativas e restaurar o equilíbrio do corpo e da alma.</p>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">⚱️</div>
-                    <div class="service-content">
-                        <h3>Ebós e Trabalhos</h3>
-                        <p>Realização de ebós e trabalhos espirituais específicos para diferentes necessidades, sempre respeitando as tradições.</p>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🙏</div>
-                    <div class="service-content">
-                        <h3>Iniciações</h3>
-                        <p>Processos de iniciação espiritual para aqueles que desejam seguir o caminho das tradições afro-brasileiras.</p>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🎗️</div>
-                    <div class="service-content">
-                        <h3>Firmas de Guarda</h3>
-                        <p>Proteção espiritual através de firmas de guarda personalizadas para sua casa, negócio ou pessoa.</p>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🕊️</div>
-                    <div class="service-content">
-                        <h3>Cerimônias e Rituais</h3>
-                        <p>Realização de cerimônias e rituais específicos conforme as necessidades espirituais de cada pessoa.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+nextBtn.addEventListener('click', () => {
+    index = (index + 1) % total;
+    updateCarousel();
+});
 
-    <!-- Contato -->
-    <section class="contact" id="contato">
-        <div class="container">
-            <h2 class="section-title">Entre em Contato</h2>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h3>Informações de Contato</h3>
-                    <div class="contact-item">
-                        <div class="contact-icon">📍</div>
-                        <div>
-                            <h4>Endereço</h4>
-                            <p>R. Dante Angelote, 185 <br>Bairro Alto, Curitiba, PR</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">📞</div>
-                        <div>
-                            <h4>Telefone</h4>
-                            <p>(41) 99763-8916</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">✉️</div>
-                        <div>
-                            <h4>E-mail</h4>
-                            <p>contato@casarosa.com.br</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">🕒</div>
-                        <div>
-                            <h4>Horário de Atendimento</h4>
-                            <p>Segunda a Sexta: 9h às 18h<br>Sábado: 9h às 13h</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <h3>Envie sua Mensagem</h3>
-                    <form>
-                        <div class="form-group">
-                            <label for="nome">Nome Completo</label>
-                            <input type="text" id="nome" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">E-mail</label>
-                            <input type="email" id="email" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="telefone">Telefone</label>
-                            <input type="tel" id="telefone" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="mensagem">Mensagem</label>
-                            <textarea id="mensagem" class="form-control" required></textarea>
-                        </div>
-                        <button type="submit" class="btn">Enviar Mensagem</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Rodapé -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>Casa Rosa</h3>
-                    <p>Uma casa de santo dedicada à espiritualidade, tradição e acolhimento. Conecte-se com as energias superiores e encontre paz interior.</p>
-                    <div class="social-icons">
-                        <a href="#" class="social-icon">f</a>
-                        <a href="https://www.instagram.com/ase_casarosa?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="social-icon">inst</a>
-                        <a href="#" class="social-icon">tk</a>
-                    </div>
-                </div>
-                <div class="footer-column">
-                    <h3>Links Rápidos</h3>
-                    <ul>
-                        <li><a href="#home">Início</a></li>
-                        <li><a href="#sobre">Sobre</a></li>
-                        <li><a href="#servicos">Serviços</a></li>
-                        <li><a href="#contato">Contato</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Nossos Serviços</h3>
-                    <ul>
-                        <li><a href="#">Consultas Espirituais</a></li>
-                        <li><a href="#">Passes e Limpezas</a></li>
-                        <li><a href="#">Ebós e Trabalhos</a></li>
-                        <li><a href="#">Iniciações</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2023 Casa Rosa - Casa de Santo. Todos os direitos reservados.</p>
-            </div>
-        </div>
-    </footer>
+prevBtn.addEventListener('click', () => {
+    index = (index - 1 + total) % total;
+    updateCarousel();
+});
+</script>
 </body>
 </html>
