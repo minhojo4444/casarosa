@@ -12,6 +12,7 @@
             "https://www.instagram.com/p/DQcQgMBidSp/",
             "https://www.instagram.com/p/DPzEZj4DSbC/"
         ];
+        // tem q arrumar um pouco pra esquerda no cll  
 
         let index = 0;
 
@@ -250,12 +251,12 @@
         .video-container {
             position: relative;
             width: 100%;
-            max-width: 380px; /* um pouco menor para encaixar melhor */
+            max-width: 327px; /* um pouco menor para encaixar melhor */
             margin: 0; /* remove margin auto que centralizava */
         }
 
         /* MOBILE */
-        @media (max-width: 480px) {
+        @media (max-width: 450px) {
             .video-wrapper {
                 justify-content: flex-start;
                 gap: 6px;
@@ -263,11 +264,11 @@
 
             .arrow {
                 font-size: 24px;
-                padding: 6px 10px;
+                padding: 6px 6px;
             }
 
             .video-container {
-                max-width: 95%;
+                max-width: 80%;
             }
         }
 
@@ -485,29 +486,27 @@
 
         /* Responsividade */
         @media (max-width: 768px) {
-            .header-container {
-                flex-direction: column;
-            }
+        .header-container {
+            flex-direction: column;
+        }
 
-            nav ul {
-                margin-top: 15px;
-            }
+        nav ul {
+            margin-top: 15px;
+        
+        }
 
-            .about-content, .contact-container {
-                flex-direction: column;
-            }
-
-            .hero h2 {
-                font-size: 2.2rem;
-            }
-
-            .footer-content {
-                flex-direction: column;
-            }
-
-            .footer-column {
-                margin-bottom: 30px;
-            }
+        .about-content, .contact-container {
+            flex-direction: column;
+        }
+        .hero h2 {
+            font-size: 2.2rem;
+        }
+        .footer-content {
+            flex-direction: column;
+        }
+        .footer-column {
+            margin-bottom: 30px;
+        }
 
 
         }
@@ -549,9 +548,9 @@
             <h2 class="section-title">Sobre a Casa Rosa</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget lacus vitae urna aliquet placerat. Suspendisse potenti. Integer non turpis sed nisl volutpat dictum et nec urna. Curabitur pharetra leo vel mauris fermentum, viverra facilisis.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus augue at urna facilisis, a posuere risus interdum. Integer vel sapien eu nulla porta fermentum. Phasellus id orci a mi luctus. semper. vita</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae nunc ac odio placerat cursus. Sed auctor felis non est varius. ac</p>
+                    <p>Nós entendemos a comunidade de terreiro como uma família, guiada pelo cuidado subjetivo e coletivo como principal diretriz. Nossa base está no Candomblé e na Umbanda, que nos orientam no desenvolvimento de nossas práticas de atenção e acolhimento ao próximo.</p>
+                    <p>O Terreiro Casa Rosa é uma extensão do Ilê Baru, em Foz do Iguaçu, fundado por Mãe Edna de Baru. Atualmente, é liderado por Bàbá Pedro de Ọya e filiado ao Ile Alaketu Ijoba Ase Airá, fundado pelo saudoso babalorixá Kaobakessi.</p>
+                    
                 </div>
                 <div class="about-image">
                     <img src="casarosafrente.PNG" alt="Altar da Casa Rosa">
